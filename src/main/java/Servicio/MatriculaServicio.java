@@ -25,6 +25,8 @@ public class MatriculaServicio implements IMatriculaServicio {
        this.listar().get(posicion).setYearMatricula(matriculaNuevo.getYearMatricula());
        this.listar().get(posicion).setFechaExpira(matriculaNuevo.getFechaExpira());
        this.listar().get(posicion).setPlaca(matriculaNuevo.getPlaca());
+       this.listar().get(posicion).setAuto(matriculaNuevo.getAuto());
+       this.listar().get(posicion).setPropietario(matriculaNuevo.getPropietario());
        return matriculaNuevo;
     }
 

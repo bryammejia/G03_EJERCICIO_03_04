@@ -47,6 +47,10 @@ public class MatriculaVentana extends javax.swing.JFrame {
         tblMatricula = new javax.swing.JTable();
         lblPlaca = new javax.swing.JLabel();
         txtPlaca = new javax.swing.JTextField();
+        lblCAuto = new javax.swing.JLabel();
+        lblCPropietario = new javax.swing.JLabel();
+        txtCAuto = new javax.swing.JTextField();
+        txtCPropietario = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -95,65 +99,79 @@ public class MatriculaVentana extends javax.swing.JFrame {
 
         tblMatricula.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
             },
             new String [] {
-                "CODIGO", "AÑO MATRICULA", "AÑO EXPIRACION", "PLACA"
+                "CODIGO", "AÑO MATRICULA", "AÑO EXPIRACION", "PLACA", "AUTO", "PROPIETARIO"
             }
         ));
         jScrollPane1.setViewportView(tblMatricula);
 
         lblPlaca.setText("PLACA:");
 
+        lblCAuto.setText("CODIGO DEL AUTO:");
+
+        lblCPropietario.setText("CODIGO DEL PROPIETARIO:");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(btnEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lblAnioMatricula)
-                                    .addComponent(lblCodigo))
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
-                                        .addComponent(txtCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(111, 111, 111))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGap(37, 37, 37)
-                                        .addComponent(txtAnioMatricula))))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lblAnioExpiracion)
-                                    .addComponent(lblPlaca))
-                                .addGap(18, 18, 18)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtAnioExpiracion)
-                                    .addComponent(txtPlaca))))
-                        .addGap(97, 97, 97)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(btnModificar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnListar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnGuardar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addGap(52, 52, 52))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(lblMatricula)
                 .addGap(182, 182, 182))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(31, 31, 31)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(btnEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(lblAnioMatricula)
+                                            .addComponent(lblCodigo))
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                                                .addComponent(txtCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(111, 111, 111))
+                                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addGap(37, 37, 37)
+                                                .addComponent(txtAnioMatricula))))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(lblAnioExpiracion)
+                                            .addComponent(lblPlaca)
+                                            .addComponent(lblCAuto))
+                                        .addGap(18, 18, 18)
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(txtAnioExpiracion)
+                                            .addComponent(txtPlaca)
+                                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addComponent(txtCAuto, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(0, 0, Short.MAX_VALUE)))))
+                                .addGap(97, 97, 97)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(btnModificar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(btnListar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(btnGuardar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGap(52, 52, 52))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(lblCPropietario)
+                        .addGap(18, 18, 18)
+                        .addComponent(txtCPropietario, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jScrollPane1)
+                        .addContainerGap())))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -180,8 +198,17 @@ public class MatriculaVentana extends javax.swing.JFrame {
                     .addComponent(btnEliminar)
                     .addComponent(lblPlaca)
                     .addComponent(txtPlaca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(15, 15, 15)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblCAuto)
+                    .addComponent(txtCAuto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 185, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblCPropietario)
+                    .addComponent(txtCPropietario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -197,8 +224,8 @@ public class MatriculaVentana extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
@@ -207,11 +234,13 @@ public class MatriculaVentana extends javax.swing.JFrame {
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
         // TODO add your handling code here:
         
-        String [] args = new String[4];
+        String [] args = new String[6];
         args[0] = this.txtCodigo.getText();
         args[1] = this.txtAnioMatricula.getText();
         args[2] = this.txtAnioExpiracion.getText();
         args[3] = this.txtPlaca.getText();
+        args[4] = this.txtCAuto.getText();
+        args[5]= this.txtCPropietario.getText();
         
         matriculaControl.crearMatricula(args);
         this.actualizarTablaMatricula();
@@ -236,11 +265,13 @@ public class MatriculaVentana extends javax.swing.JFrame {
     private void btnModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarActionPerformed
         // TODO add your handling code here:
         
-        String [] args = new String[4];
+        String [] args = new String[6];
         args[0]= this.txtCodigo.getText();
         args[1]= this.txtAnioMatricula.getText();
         args[2]= this.txtAnioExpiracion.getText();
         args[3]= this.txtPlaca.getText();
+        args[4]= this.txtCAuto.getText();
+        args[5]= this.txtCPropietario.getText();
         
         this.matriculaControl.modificar(args);
         
@@ -254,24 +285,30 @@ public class MatriculaVentana extends javax.swing.JFrame {
         this.txtAnioMatricula.setText(String.valueOf(matricula.getYearMatricula()));
         this.txtAnioExpiracion.setText(String.valueOf(matricula.getFechaExpira()));
         this.txtPlaca.setText(matricula.getPlaca());
+        //this.txtCAuto.setText(String.valueOf(matricula.getAuto()));
+        //this.txtCPropietario.setText(String.valueOf(matricula.getPropietario()));
         
     }//GEN-LAST:event_txtCodigoActionPerformed
 
     private void actualizarTablaMatricula(){
         
-        String[] encabezado = new String [4];
+        String[] encabezado = new String [6];
         encabezado[0]="CODIGO";
         encabezado[1]="AÑO MATRICULA";
         encabezado[2]="AÑO EXPIRACION";
         encabezado[3]="PLACA";
+        encabezado[4]="AUTO";
+        encabezado[5]="PROPIETARIO";
         
-        var datos = new Object[this.matriculaControl.listar().size()][4];
+        var datos = new Object[this.matriculaControl.listar().size()][6];
         var i = 0;
         for(var matricula:this.matriculaControl.listar()){
             datos[i][0]=matricula.getCodigo();
             datos[i][1]=matricula.getYearMatricula();
             datos[i][2]=matricula.getFechaExpira();
             datos[i][3]=matricula.getPlaca();
+            datos[i][4]=matricula.getAuto().getMarca();
+            datos[i][5]=matricula.getPropietario().getNombre();
             i++;
         }
         this.modeloTabla = new DefaultTableModel(datos, encabezado);
@@ -326,12 +363,16 @@ public class MatriculaVentana extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblAnioExpiracion;
     private javax.swing.JLabel lblAnioMatricula;
+    private javax.swing.JLabel lblCAuto;
+    private javax.swing.JLabel lblCPropietario;
     private javax.swing.JLabel lblCodigo;
     private javax.swing.JLabel lblMatricula;
     private javax.swing.JLabel lblPlaca;
     private javax.swing.JTable tblMatricula;
     private javax.swing.JTextField txtAnioExpiracion;
     private javax.swing.JTextField txtAnioMatricula;
+    private javax.swing.JTextField txtCAuto;
+    private javax.swing.JTextField txtCPropietario;
     private javax.swing.JTextField txtCodigo;
     private javax.swing.JTextField txtPlaca;
     // End of variables declaration//GEN-END:variables
